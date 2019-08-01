@@ -1,0 +1,368 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <title>lbjsc trend imgae</title> 
+  <link href="/common/template/lottery/trendchartnew/css/z_style.css?v=1.22" rel="stylesheet" type="text/css"> 
+  <link href="/common/template/lottery/trendchartnew/css/datepicker.css" rel="stylesheet"> 
+  <link href="/common/template/lottery/trendchartnew/css/common.css?v=2018" rel="stylesheet"> 
+  <script src="/common/template/lottery/trendchartnew/js/jquery.min.js"></script> 
+ </head>
+ <body> 
+  <div id="box" class="qc"> 
+   <div class="qc" id="Right"> 
+    <div class="main" style="width: 100% ; overflow: auto"> 
+     <div class="main-box no_10-box"> 
+      <div class="main-nav"> 
+       <div class="cplogo">
+        <img src="/common/template/lottery/lecai/images/gclogo/LBJSC.png" alt="">
+        <span>lbjsc</span>
+       </div> 
+       <div class="czqh"> 
+        <span class="curretSsc">切换彩种</span>
+        <span class="xiajian"></span> 
+        <div class="min" style="display: none;"> 
+         <dl> 
+          <dt> 
+           <span class="iconOne"></span> 高频彩： 
+          </dt> 
+          <dd> 
+           <ul> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=FFC">分分彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=EFC">二分彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=SFC">三分彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=WFC">五分彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=FF28">幸运28</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=WFK3">幸运快三</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=FFK3">极速快三</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=TFK3">十分快三</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=FKFT">疯狂飞艇</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=FKSC">疯狂赛车</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=SFSC">极速赛车</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=BJSC">北京赛车</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=LBJSC">老北京赛车</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=CQSSC">重庆时时彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=LCQSSC">老重庆时时彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=XJSSC">新疆时时彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=PCEGG">PC蛋蛋</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=HBK3">湖北快三</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=HEBK3">河北快三</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=GXK3">广西快三</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=JSSB3">江苏快三</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=BJK3">北京快三</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=GSK3">甘肃快三</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=SD11X5">山东11选5</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=JX11X5">江西11选5</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=CQXYNC">重庆幸运农场</a> </li> 
+           </ul> 
+          </dd> 
+         </dl> 
+         <dl> 
+          <dt> 
+           <span class="iconTwo"></span> 低频彩： 
+          </dt> 
+          <dd> 
+           <ul> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=LHC">六合彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=SLHC">三分六合彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=WFLHC">五分六合彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=SFLHC">十分六合彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=JSLHC">极速六合彩</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=JS3D">极速3D</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=FC3D">福彩3D</a> </li> 
+            <li> <a href="/lottery/trendChart/index.do?lotCode=PL3">排列三</a> </li> 
+           </ul> 
+          </dd> 
+         </dl> 
+        </div> 
+       </div> 
+       <ul class="btn-navs"> 
+        <li class="fff" data-contentid="zhexianData" data-id="shuju1">基本走势</li> 
+        <li data-contentid="shuju2" data-id="shuju2">K线图</li> 
+        <li data-id="shuju5">历史开奖数据</li> 
+       </ul> 
+      </div> 
+      <div class="qhbox"> 
+       <div class="search"> 
+        <ul class="search-left"> 
+         <li><label>遗漏数据<input id="checkboxYlsj" checked type="checkbox"></label></li> 
+         <li><label>遗漏分层<input id="checkboxYlfc" type="checkbox"></label></li> 
+         <li class="zhe"><label>折线<input id="checkboxZhexian" checked type="checkbox"></label></li> 
+        </ul> 
+        <ul class="search-right"> 
+         <li> 
+          <div>
+           <b>查询：</b>
+          </div> </li> 
+         <li> 
+          <div class="qi xuan"> 
+           <a href="javascript:void(0)" class="on30qi">近30期</a> 
+          </div> </li> 
+         <li> 
+          <div class="qi"> 
+           <a href="javascript:void(0)" class="on50qi">近50期</a> 
+          </div> </li> 
+         <li> 
+          <div class="qi"> 
+           <a href="javascript:void(0)" class="on100qi">近100期</a> 
+          </div> </li> 
+         <li> 
+          <div class="qi"> 
+           <a href="javascript:void(0)" class="on150qi">近150期</a> 
+          </div> </li> 
+         <li> 
+          <div class="qi"> 
+           <a href="javascript:void(0)" class="on200qi">近200期</a> 
+          </div> </li> 
+         <li> 
+          <div class="qi2"> 
+           <a href="javascript:void(0)" class="on200qi">前天</a> 
+          </div> </li> 
+         <li> 
+          <div class="qi2"> 
+           <a href="javascript:void(0)" class="on200qi">昨天</a> 
+          </div> </li> 
+         <li> 
+          <div class="qi2 xuan2"> 
+           <a href="javascript:void(0)" class="on200qi">今天</a> 
+          </div> </li> 
+        </ul> 
+       </div> 
+       <div id="htmlContent"> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="xiajiao">
+     快速购买 安徽快3 
+   </div> 
+   <div class="mb"> 
+   </div> 
+  </div> 
+  <input type="hidden" value="LBJSC" id="lotCode"> 
+  <input type="hidden" value="10" id="lotBallNum"> 
+  <input type="hidden" value="v5" id="lotteryVersion"> 
+  <script>
+    // 闪烁
+    var blinkColorArr = "#fa6200|#0f3f94".split("|");
+    $(".blink").each(function () {
+        var obj = $(this);
+        setInterval(function () {
+            var tmpColor = blinkColorArr[parseInt(Math.random() * blinkColorArr.length)];
+            $(obj).css("color", tmpColor);
+        }, 200);
+    });
+    var currentLunarYear = 2019; 
+
+</script> 
+  <script src="/common/template/lottery/trendchartnew/js/dateFormat.js"></script> 
+  <script src="/common/template/lottery/trendchartnew/js/global.js?v=2018"></script> 
+  <script src="/common/template/lottery/trendchartnew/js/layer.js"></script> 
+  <script src="/common/template/lottery/trendchartnew/js/echarts.min.js"></script> 
+  <script src="/common/template/lottery/trendchartnew/js/htmlHandel/no_10_baseJs.js?v=21.121"></script> 
+  <script src="../js/lbjsc.js"></script>
+  <script>
+    $.extend({
+        getStrResouce: function (url) {
+            var resourceContent = "";
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: "text",
+                data: {},
+                async: false, // 默认值: true。默认设置下，所有请求均为异步请求。如果需要发送同步请求，请将此选项设置为 false。注意，同步请求将锁住浏览器，用户其它操作必须等待请求完成才可以执行。
+                success: function (result) {
+                    resourceContent = result;
+                }
+            });
+            return resourceContent;
+        }
+    });
+    var lotCode = $("#lotCode").val();
+    var pageSize = 30;
+    var recentDay = 1;
+    $(function () {
+        var startT = 0;
+        $(".search-right .qi a").click(function () {
+            $(".search-right .qi.xuan").removeClass("xuan");    //方法从被选元素移除一个或多个类.
+            $(this).parent().addClass("xuan");   //addClass向被选元素添加一个或多个类 //parent)_返回被选元素的直接父元素。
+            var flag = $(this).html();   //html()返回或设置被选元素的内容
+            if (flag == "近30期") {
+                pageSize = 30;
+            } else if (flag == "近50期") {
+                pageSize = 50;
+            } else if (flag == "近100期") {
+                pageSize = 100;
+            } else if (flag == "近150期") {
+                pageSize = 150;
+            } else if (flag == "近200期") {
+                pageSize = 200;
+            }
+            ajaxGetData(lotCode, pageSize, recentDay);
+        });
+
+        $(".search-right .qi2 a").click(function () {
+            $(".search-right .qi2.xuan2").removeClass("xuan2");    //方法从被选元素移除一个或多个类.
+            $(this).parent().addClass("xuan2");   //addClass向被选元素添加一个或多个类 //parent)_返回被选元素的直接父元素。
+            var flag = $(this).html();   //html()返回或设置被选元素的内容
+            if (flag == "今天") {
+                recentDay = 1;
+            }
+            else if (flag == "昨天") {
+                recentDay = 2;
+            } else if (flag = "前天") {
+                recentDay = 3;
+            }
+            ajaxGetData(lotCode, pageSize, recentDay);
+        });
+    });
+
+    function showLoading() {
+        layer.load(2, {
+            shade: [0.1, '#000'] //0.1透明度的白色背景
+        })
+    }
+
+    function hideLoading() {
+        layer.closeAll();
+    }
+
+    $(function () {
+        hideLoading();
+    });
+
+    $(function () {
+        //悬停
+        $(".czqh").hover(function () {
+            $(".min").show()
+        }, function () {
+            $(".min").hide()
+        });
+    });
+
+    $(function () {
+        var right_w = $(".shuoming .shuomingright").outerWidth();
+        var right_h = $(".shuoming .shuomingright").outerHeight();
+        var left_h = $(".shuoming .shuomingleft").outerHeight();
+        if (right_h > left_h) {
+            $(".shuoming .shuomingleft").css("height", right_h);
+        }
+        var zong_w = $(".shuoming").outerWidth();
+        var left_w = zong_w - right_w - 5;
+        $(".shuoming .shuomingleft").css("width", left_w);
+    });
+
+    //加载模板
+    function getTemContext(lotBallNum , lotCode) {
+        var resurce = $.getStrResouce("https://500979.vip/common/template/lottery/trendchartnew/template/no_10_baseTrend.html?v=4.1");
+        $("#htmlContent").html(resurce);
+    }
+
+    $(function () {
+
+        getTemContext($("#lotBallNum").val(),$("#lotCode").val());
+        $(".btn-navs li").click(function (e) {
+            $(".shuju").hide();
+            $("#" + $(this).data("id")).show();
+            $(this).attr("class", "fff").siblings().removeClass();
+            if ($(this).data("id") == 'shuju1' || $(this).data("id") == 'shuju2' || $(this).data("id") == 'shuju3') {
+
+            } else {
+
+            }
+        });
+
+        var type = '1';
+        if (typeof type == 'undefined' || type == '' || isNaN(type)) {
+            type = 1;
+        } else {
+            type = Tools.parseInt(type);
+        }
+        $("[data-id='shuju" + type + "']").trigger("click");
+        /*$(".search-right .qi a").eq(0).trigger("click");*/
+        ajaxGetData(lotCode, pageSize, recentDay);
+    });
+
+    function ajaxGetData(lotCode, pageSize, recentDay) {
+        ajaxRequest({
+            url: "/lottery/trendChart/lotteryOpenNum.do?lotCode="+lotCode+"&recentDay="+recentDay+"&rows="+pageSize,
+            data: {},
+            beforeSend: function() {
+                showLoading();
+            },
+            success: function(data) {
+                if (data.success == false) {
+                    hideLoading();
+                    alert("当前无开奖数据！");
+                    return;
+                }
+                //data.reverse();
+                // 折线
+                zhexian(data);
+                // k线
+                kxian(data);
+                // 直方图
+                zhifang(data);
+                // 历史数据
+                lssj(data,$("#lotteryVersion").val());
+                hideLoading();
+
+                $(".btn-navs li").each(function() {
+                    if($(this).hasClass("fff")) {
+                        return;
+                    }
+
+                });
+                if($("#checkboxYlfc").is(":checked")) {
+                    $(".ylfc").addClass("ylfc-bg");
+                } else {
+                    $(".ylfc").removeClass("ylfc-bg");
+                }
+
+
+                function GetQueryString(name) {
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                    var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+                    var context = "";
+                    if (r != null)
+                        context = r[2];
+                    reg = null;
+                    r = null;
+                    return context == null || context == "" || context == "undefined" ? "" : context;
+                }
+                GetQueryString("l")==1&& $(".btn-navs li:last").trigger("click");
+            }
+        });
+    }
+
+    $(function () {
+        $("#checkboxZhexian").change(function () {
+            if ($(this).is(":checked")) {
+                $(".zhexian").show();
+            } else {
+                $(".zhexian").hide();
+            }
+        });
+
+        $("#checkboxYlsj").change(function () {
+            if ($(this).is(":checked")) {
+                $(".transparent").addClass("not-transparent");
+            } else {
+                $(".transparent").removeClass("not-transparent");
+            }
+        });
+
+        $("#checkboxYlfc").change(function () {
+            if ($(this).is(":checked")) {
+                $(".ylfc").addClass("ylfc-bg");
+            } else {
+                $(".ylfc").removeClass("ylfc-bg");
+            }
+        });
+    });
+</script> 
+  <div class="layui-layer-move"></div>   
+ </body>
+</html>
